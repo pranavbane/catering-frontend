@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000",
+  output: 'export',
+  images: {
+    unoptimized: true,
   },
-};
+  basePath: '/catering-frontend',
+  assetPrefix: '/catering-frontend/',
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
